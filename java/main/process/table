@@ -1,0 +1,28 @@
+    <table class="table" border="1" style="text-align: center;">
+            <tr>
+            <th> </th>
+        <?php for($i = 0 ; $i < $config ; $i++){ ?>
+                <th>Case <?php echo $i+1 ?></th>
+                <?php } ?>
+            </tr>
+            <tr>
+                <td>Time</td>
+                <?php for($i = 0 ; $i < $config ; $i++){ ?>
+                     <td><?php echo $arr_time[$i] ?></td>
+                <?php } ?>
+            </tr>
+            <tr>
+            <td>Status</td>
+            <?php for($i = 0 ; $i < $config ; $i++){ ?>
+                     <td><?php echo $arr_P[$i] ?></td>
+                <?php } ?>
+            </tr>
+            <tr>
+                <td>Score</td>
+                <?php for($i = 0 ; $i < $config ; $i++){ ?>
+                     <td><?php echo sprintf("%0.2f" , $arr_Score[$i]) ?></td>
+                     <?php $score += $arr_Score[$i]?>
+                <?php } ?>
+            </tr>
+                    <th>Score <?php  echo sprintf("%0.2f" , $score) ?></th>
+    </table>
